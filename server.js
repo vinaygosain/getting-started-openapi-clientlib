@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 // Serve Static Content
-app.use(express.static(__dirname + './'));
+app.use(express.static(__dirname + '/'));
 
 app.get('/batching', function (request, response, next) {
     console.log("batching route hit");
