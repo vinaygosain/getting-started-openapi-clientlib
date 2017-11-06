@@ -2,11 +2,19 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
     <input name="get_user_details" id="get_user_details" type="button" value="GET DETAILS">
+    <div class="panel-heading">
+        <h4 role="presentation" class="panel-title"><a role="tab" aria-expanded="true" aria-selected="true">Client Info: </a></h4>
+    </div>
+    <table class="user_details_table table table-striped table-bordered table-condensed table-hover">
+        <tbody class="user_details">
 
-<script src="getUserDetail.js"></script>
+        </tbody>
+    </table>
+<script src="/build/getUserDetail.js"></script>
 </body>
 </html>

@@ -16,6 +16,10 @@ app.get('/priceformatting', function (request, response, next) {
     response.sendFile(path.join(__dirname + '/priceformatting/priceformatting.html'));
 });
 
+app.get('/getUserDetail', function (request, response, next) {
+    response.sendFile(path.join(__dirname + '/getUserDetail/getUserDetail.html'));
+});
+
 app.get('*', function (request, response, next) {
     response.sendFile(path.join(__dirname + '/index.html'));
 });

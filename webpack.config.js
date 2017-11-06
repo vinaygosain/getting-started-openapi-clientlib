@@ -4,7 +4,8 @@ module.exports = {
     entry: {
         // index: path.join(__dirname, 'index'),
         batching: path.join(__dirname, 'batching', 'batching'),
-        priceformatting: path.join(__dirname, 'priceformatting', 'priceformatting')
+        priceformatting: path.join(__dirname, 'priceformatting', 'priceformatting'),
+        getUserDetail: path.join(__dirname, 'getUserDetail', 'getUserDetail')
     },
 
     devtool: "source-map",
