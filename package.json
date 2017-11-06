@@ -1,0 +1,14 @@
+{
+  "name": "GettingStarted",
+  "version": "1.0.0",
+  "description": "This is a basic foundational getting started sample for using open api client lib.",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "SaxoBank",
+  "dependencies": {
+    "express": "^4.15.4",
+    "signalr": "^2.2.2",
+    "jquery": "^3.2.1"
+  }
+}
