@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
     entry: {
         // index: path.join(__dirname, 'index'),
-        batching: path.join(__dirname, 'batching', 'batching')
+        batching: path.join(__dirname, 'batching', 'batching'),
+        priceformatting: path.join(__dirname, 'priceformatting', 'priceformatting')
     },
 
     devtool: "source-map",
