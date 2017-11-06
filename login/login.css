@@ -1,0 +1,102 @@
+.login{
+    position: relative;
+    max-width: 320px;
+    min-width: 320px;
+    margin: 100px auto 0;
+    overflow: hidden;
+}
+
+.login fieldset {
+    position: relative;
+    background: #444;
+    padding: 16px;
+}
+
+header{
+    background: #666;
+    padding: 8px;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin : 0 2px 0;
+    color: #fff;
+}
+
+.grid {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    text-align: start;
+}
+
+.form-group {
+    width: 100%;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid transparent;
+    padding: 8px 0;
+}
+
+.grid-cell {
+    position: relative;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    align-self: start;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.login .form-group .form-label p {
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 12px;
+    height: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#field_userid, #field_password {
+    display: block;
+    width: 90%;
+    height: 24px;
+    padding: 2px 6px;
+    vertical-align: middle;
+    color: #ddd;
+    background: #222;
+    outline: 0;
+    border: 0;
+}
+
+#button_login {
+    display: block;
+    padding: 3px 8px;
+    min-width: 0;
+    height: 32px;
+    width: 100%;
+    background: #3498db;
+    color: #ddd;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 22px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+}

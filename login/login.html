@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="login">
+        <form>
+            <header>LOGIN</header>
+
+            <fieldset>
+
+                <div class="form-group grid">
+                    <label class="form-label grid-cell" for="field_userid"><p>User ID</p></label>
+                    <div class="grid-cell">
+                        <input name="field_userid" value="" id="field_userid" type="text" autocomplete="off" maxlength="32">
+                    </div>
+                </div>
+
+                <div class="form-group grid">
+                    <label class="form-label grid-cell" for="field_password"><p>Password</p></label>
+                    <div class="grid-cell">
+                        <input name="field_password" id="field_password" value="" type="password" autocomplete="off" maxlength="32">
+                    </div>
+                </div>
+
+                <input name="button_login" id="button_login" type="submit" value="Submit" onClick="submitInfo()">
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
