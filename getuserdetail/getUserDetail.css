@@ -1,4 +1,11 @@
-.user_details_table{
-    display: none;
+.get_user_details {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
 }
 
+.panel{
+    width: 83.33%;
+    margin: 10px auto;
+}

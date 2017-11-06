@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a basic foundational getting started sample for using open api client lib.",
   "scripts": {
-    "start": "node_modules\\.bin\\webpack-dev-server"
+    "start": "node server"
   },
   "author": "SaxoBank",
   "dependencies": {
