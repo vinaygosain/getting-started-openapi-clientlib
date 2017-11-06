@@ -11,6 +11,11 @@ app.get('/batching', function (request, response, next) {
     response.sendFile(path.join(__dirname + '/batching/batching.html'));
 });
 
+app.get('/priceformatting', function (request, response, next) {
+    console.log("batching route hit");
+    response.sendFile(path.join(__dirname + '/priceformatting/priceformatting.html'));
+});
+
 app.get('*', function (request, response, next) {
     response.sendFile(path.join(__dirname + '/index.html'));
 });

@@ -1,4 +1,4 @@
-import { subscribePrices } from './api';
+import { subscribePrices } from '../utils/api';
 
 
 class Batching {
