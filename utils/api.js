@@ -358,3 +358,30 @@ export function placeOrder(accessToken, order) {
         accessToken,
     });
 }
+
+
+// batching helper method
+export function subscribePricesBatch(accessToken, instrumentData, onUpdate, onError) {
+    return new Promise(function (resolve) {
+        const subscription = services.subscribeBatches({
+            serviceGroup: 'trade',
+            endPoint: 'v1/prices/subscriptions/active',
+            queryParams: {
+                Arguments: {
+                    AssetType: instrumentData.AssetType,
+                    Uic: instrumentData.Uic,
+                    FieldGroups: [
+                        'InstrumentPriceDetails',
+                        'PriceInfo',
+                        'PriceInfoDetails',
+                        'Quote',
+                        'DisplayAndFormat',
+                    ],
+                },
+                RefreshRate: 5,
+            },
+            accessToken,
+        }, onUpdate, onError);
+        resolve(subscription);
+    });
+}

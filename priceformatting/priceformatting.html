@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Price Formatting</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <h1>Price Formatting demo</h1>
 <button onclick="handleSubscribePricesBtnClick()">Subscribe Prices</button>
-<table >
-    <thead>
-    <tr>
-        <th>Live Price Feed</th>
-    </tr>
-    </thead>
-    <tbody class="price-table-body">
-    <tr>
-        <td class="asset-type"></td>
-        <td class="symbol"></td>
-    </tr>
-    <tr>
-        <td>Ask Price</td>
-        <td class="ask-label"></td>
+<div class="table-div">
+    <table>
+        <thead>
+        <tr>
+            <th>Live Price Feed</th>
+        </tr>
+        </thead>
+        <tbody class="price-table-body">
+        <tr>
+            <td class="asset-type"></td>
+            <td class="symbol"></td>
+        </tr>
+        <tr>
+            <td>Ask Price</td>
+            <td class="ask-label"></td>
 
-    </tr>
-    <tr>
-        <td> Bid Price</td>
-        <td class="bid-label"></td>
-    </tr>
-    </tbody>
-</table>
+        </tr>
+        <tr>
+            <td> Bid Price</td>
+            <td class="bid-label"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <script src="/build/priceFormatting.js"></script>
 </body>
 </html>
