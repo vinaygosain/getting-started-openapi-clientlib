@@ -6,6 +6,10 @@ var app = express();
 // Serve Static Content
 app.use(express.static(__dirname + '/'));
 
+app.get('/login', function (request, response, next) {
+    response.sendFile(path.join(__dirname + '/login/login.html'));
+});
+
 app.get('/batching', function (request, response, next) {
     console.log("batching route hit");
     response.sendFile(path.join(__dirname + '/batching/batching.html'));

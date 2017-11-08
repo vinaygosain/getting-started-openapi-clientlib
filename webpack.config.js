@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     entry: {
         // index: path.join(__dirname, 'index'),
+        login: path.join(__dirname, 'login', 'login'),
         batching: path.join(__dirname, 'batching', 'batching'),
         priceformatting: path.join(__dirname, 'priceformatting', 'priceformatting'),
         getUserDetail: path.join(__dirname, 'getUserDetail', 'getUserDetail'),
