@@ -56,3 +56,31 @@ export function subscribe(params, onUpdate, onError) {
 export function disposeIndividualSubscription(accessToken, subscription) {
     getStreamingObj(accessToken).disposeSubscription(subscription);
 }
+
+
+// batching helper methods
+
+function getTransportBatch(accessToken) {
+
+    const transportAuth = getTransportAuth(accessToken);
+    const transportBatch = new saxo.openapi.TransportBatch(transportAuth, transportUrl, transportAuth.auth);
+    // const queuedTransport = new saxo.openapi.TransportQueue(transportBatch, transportAuth);
+    // openApi.rest = new HeaderRemovalTransport(queuedTransport);
+    // transportBatch.runBatches();
+    return transportBatch;
+}
+
+function getBatchStreamingObj(authToken = 'default_token') {
+    if (!streaming || prevTokenState !== authToken) {
+        streaming = new saxo.openapi.Streaming(getTransportBatch(authToken), streamingUrl, { getToken: () => authToken });
+        prevTokenState = authToken;
+    }
+    return streaming;
+}
+
+export function subscribeBatches(params, onUpdate, onError) {
+    const subscription = getBatchStreamingObj(params.accessToken, params.endPoint)
+    .createSubscription(params.serviceGroup, params.endPoint, params.queryParams, onUpdate, onError);
+    subscriptions.push(subscription);
+    return subscription;
+}

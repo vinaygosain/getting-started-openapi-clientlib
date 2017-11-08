@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Batching Demo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<button onclick="handleSubscribePricesBtnClick()">Subscribe Prices</button>
-<script src="/build/batching.js"></script>
+<button type="button" class="btn btn-primary" onclick="handleSubscribePricesBtnClick()">Send Batch Request for Prices</button>
+<div class="table-div">
+    <table class="table table-striped">
+        <tr>
+            <th>Asset Symbol</th>
+            <th>Ask Price</th>
+            <th>Bid Price</th>
+        </tr>
+        <tbody class="table-body"></tbody>
+    </table>
+</div>
+
+<script src="/batching.js"></script>
 </body>
 </html>
