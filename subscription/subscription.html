@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="panel panel-primary" id="subscription">
+        <div class="panel-heading">
+            Subscription
+        </div>
+        <form class="panel-body" id="subscribe-form">
+            <div class="form-group">
+                <button class="btn btn-primary" type="button" id="subscriptionClick" onclick="handleSubscribeBtnClick()">Subscribe</button>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Endpoint</label>
+                <input name="endpoint" class="form-control" value="trade/v1/infoprices/subscriptions" readonly="">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Arguments</label>
+                    <textarea name="arguments" class="form-control" rows="5">
+                    {
+                        "Uics": "2071",
+                        "AssetType": "FxSpot",
+                        "FieldGroups": ["MarketDepth","Quote"]
+                    }
+                    </textarea>
+            </div>
+        </form>
+        <form class="panel-body" id="unsubscribe-form">
+            <div class="form-group">
+                <button class="btn btn-primary" type="button" onclick="handleSubscribeBtnClick(true)">Unsubscribe</button>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Snapshot (auto updated with message data)</label>
+                <pre><code id="snapshot" class="pretty-print"></code></pre>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="/build/subscription.js"></script>
+</html>

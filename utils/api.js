@@ -15,7 +15,7 @@ export function getInstruments(accessToken, assetTypes, keyword) {
     return services.getData({
         serviceGroup: 'ref',
         endPoint: 'v1/instruments',
-        queryParams: { AssetTypes: assetTypes, Keywords: keyword },
+        queryParams: {AssetTypes: assetTypes, Keywords: keyword},
         accessToken,
     });
 }
@@ -117,14 +117,14 @@ export function getOptionRootData(accessToken, rootId) {
 }
 
 /* subscribe to Info prices for a set of instruments based on AssetType and Uics.
-    eg: Query Params : {
-        Arguments: {
-            AssetType: 'FxSpot',
-            Uics: 21,2
-        },
-        RefreshRate: 5
-    }
-*/
+ eg: Query Params : {
+ Arguments: {
+ AssetType: 'FxSpot',
+ Uics: 21,2
+ },
+ RefreshRate: 5
+ }
+ */
 export function subscribeInfoPrices(accessToken, instrumentData, onUpdate, onError) {
     return new Promise((resolve) => {
         const subscription = services.subscribe({
@@ -134,32 +134,24 @@ export function subscribeInfoPrices(accessToken, instrumentData, onUpdate, onErr
                 Arguments: {
                     AssetType: instrumentData.AssetType,
                     Uics: instrumentData.Uics,
-                    FieldGroups: [
-                        'DisplayAndFormat',
-                        'InstrumentPriceDetails',
-                        'MarketDepth',
-                        'PriceInfo',
-                        'PriceInfoDetails',
-                        'Quote',
-                    ],
-                },
-                RefreshRate: 5,
-            },
-            accessToken,
+                    FieldGroups: ['DisplayAndFormat', 'InstrumentPriceDetails', 'MarketDepth', 'PriceInfo',
+                        'PriceInfoDetails', 'Quote'],
+                }, RefreshRate: 5,
+            }, accessToken,
         }, onUpdate, onError);
         resolve(subscription);
     });
 }
 
 /*  subscribe to Prices for a single instrument based on AssetType and Uic.
-     eg: Query Params : {
-         Arguments: {
-             AssetType: 'FxSpot',
-             Uic: 21
-         },
-         RefreshRate: 5
-     }
-*/
+ eg: Query Params : {
+ Arguments: {
+ AssetType: 'FxSpot',
+ Uic: 21
+ },
+ RefreshRate: 5
+ }
+ */
 export function subscribePrices(accessToken, instrumentData, onUpdate, onError) {
     return new Promise((resolve) => {
         const subscription = services.subscribe({
