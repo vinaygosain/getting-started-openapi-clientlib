@@ -28,7 +28,6 @@ class priceFormatting {
         } else if (Data.Quote) {
             this.askLabel.textContent = Data.Quote.Ask;
             this.bidLabel.textContent = Data.Quote.Bid;
-
         }
     }
 
@@ -41,8 +40,6 @@ class priceFormatting {
             console.log(subscription);
         });
     }
-
-
 }
 
 const priceFormatter = new priceFormatting();
